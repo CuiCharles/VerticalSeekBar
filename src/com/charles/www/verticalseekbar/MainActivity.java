@@ -13,15 +13,16 @@ public class MainActivity extends ActionBarActivity {
 	
 	private final String TAG = this.getClass().getSimpleName();
 	
-	private SeekBar seekBar = null;
+	private VerticalSeekBar seekBar = null;
+	private VerticalSeekBarContainer container = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        seekBar = (SeekBar)findViewById(R.id.test_seekbar);
-        
+        seekBar = (VerticalSeekBar)findViewById(R.id.test_seekbar);
+        container = (VerticalSeekBarContainer)findViewById(R.id.test_container);
         seekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 			
 			@Override
@@ -46,7 +47,10 @@ public class MainActivity extends ActionBarActivity {
 		
 		});
         
-        seekBar.setProgress(90);
+        container.setSeekbar(seekBar);
+        seekBar.setMax(100);
+        seekBar.setProgress(50);
+        
     }
 
     @Override

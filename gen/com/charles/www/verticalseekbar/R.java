@@ -1078,6 +1078,11 @@ containing a value of this type.
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
         public static final int ic_launcher=0x7f020057;
+        public static final int scan_zoom_bg=0x7f020058;
+        public static final int scan_zoom_plus=0x7f020059;
+        public static final int scan_zoom_reduce=0x7f02005a;
+        public static final int seekbar_horizontal=0x7f02005b;
+        public static final int seekbar_thumb=0x7f02005c;
     }
     public static final class id {
         public static final int action_bar=0x7f09001c;
@@ -1091,7 +1096,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f090002;
         public static final int action_menu_presenter=0x7f090003;
         public static final int action_mode_close_button=0x7f090024;
-        public static final int action_settings=0x7f09003d;
+        public static final int action_settings=0x7f090040;
         public static final int activity_chooser_view_content=0x7f090025;
         public static final int always=0x7f09000f;
         public static final int beginning=0x7f090016;
@@ -1110,6 +1115,8 @@ containing a value of this type.
         public static final int icon=0x7f09002a;
         public static final int ifRoom=0x7f090011;
         public static final int image=0x7f090027;
+        public static final int image_plus=0x7f09003d;
+        public static final int image_reduce=0x7f09003e;
         public static final int listMode=0x7f090006;
         public static final int list_item=0x7f090029;
         public static final int middle=0x7f090018;
@@ -1136,7 +1143,8 @@ containing a value of this type.
         public static final int split_action_bar=0x7f09001e;
         public static final int submit_area=0x7f090039;
         public static final int tabMode=0x7f090008;
-        public static final int test_seekbar=0x7f09003c;
+        public static final int test_container=0x7f09003c;
+        public static final int test_seekbar=0x7f09003f;
         public static final int title=0x7f09002b;
         public static final int top_action_bar=0x7f090020;
         public static final int up=0x7f090021;
@@ -1473,6 +1481,9 @@ containing a value of this type.
         public static final int Widget_AppCompat_ProgressBar=0x7f0b000a;
         public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f0b0009;
         public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0b0022;
+        /**  android customized seekbar style 
+         */
+        public static final int Widget_SeekBar_Normal=0x7f0b008d;
     }
     public static final class styleable {
         /**  ============================================ 

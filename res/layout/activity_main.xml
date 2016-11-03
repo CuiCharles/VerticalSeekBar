@@ -8,10 +8,43 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.charles.www.verticalseekbar.MainActivity" >
 
-    <SeekBar
-        android:id="@+id/test_seekbar"
+    <com.charles.www.verticalseekbar.VerticalSeekBarContainer
+        android:id="@+id/test_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_height="match_parent" 
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/scan_zoom_bg" >
+
+            <ImageView
+                android:id="@+id/image_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/scan_zoom_plus" />
+
+            <ImageView
+                android:id="@+id/image_reduce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/scan_zoom_reduce" />
+
+            <com.charles.www.verticalseekbar.VerticalSeekBar
+                android:id="@+id/test_seekbar"
+                style="@style/Widget.SeekBar.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/image_reduce"
+                android:layout_below="@+id/image_plus"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </com.charles.www.verticalseekbar.VerticalSeekBarContainer>
 
 </RelativeLayout>
