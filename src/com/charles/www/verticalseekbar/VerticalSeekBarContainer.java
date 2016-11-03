@@ -140,7 +140,7 @@ public class VerticalSeekBarContainer extends RelativeLayout {
 	{
 		this.context = context;
 		mGestureDetector = new GestureDetector(this.context,new TGestureListener());
-		
+		disappearTimer = new Timer();
 	}
 	
 	@Override
@@ -149,6 +149,7 @@ public class VerticalSeekBarContainer extends RelativeLayout {
 			case MotionEvent.ACTION_DOWN:
 				break;
 			case MotionEvent.ACTION_UP://在用户手势离开后，开始计时，一定时间后，seekbar消失
+				disappearTimer.cancel();
 				disappearTimer = new Timer();
 				disappearTimer.schedule(new DisappearTimerTask(), 2000L);
 				break;
