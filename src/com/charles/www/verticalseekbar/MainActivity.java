@@ -5,6 +5,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
@@ -15,6 +17,7 @@ public class MainActivity extends ActionBarActivity {
 	
 	private VerticalSeekBar seekBar = null;
 	private VerticalSeekBarContainer container = null;
+	private RelativeLayout seekBarLayout = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,8 @@ public class MainActivity extends ActionBarActivity {
         
         seekBar = (VerticalSeekBar)findViewById(R.id.test_seekbar);
         container = (VerticalSeekBarContainer)findViewById(R.id.test_container);
+        seekBarLayout = (RelativeLayout)findViewById(R.id.test_relative_layout);
+        
         seekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 			
 			@Override
@@ -48,6 +53,8 @@ public class MainActivity extends ActionBarActivity {
 		});
         
         container.setSeekbar(seekBar);
+        seekBarLayout.setVisibility(View.GONE);
+        container.setSeekBarContainer(seekBarLayout);
         seekBar.setMax(100);
         seekBar.setProgress(50);
         
